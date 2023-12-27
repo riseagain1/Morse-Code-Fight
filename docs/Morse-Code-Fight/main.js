@@ -155,6 +155,7 @@ function checkPlayerActionsAgainstEnemy() {
     }
 }
 function activateRedShield() {
+    play("powerUp");
     player.shieldActive = true;
     player.shieldTimer = 20 * 60; 
     player.shieldColor = "red"; 
@@ -209,6 +210,7 @@ function update() {
     
         // Collision detection for player bullets
         if (bullet.owner === "player" && char("b", enemy.pos).isColliding.rect.red) {
+            play("hit");
             color("yellow");
             particle(bullet.pos);
             bullets.splice(i, 1);
@@ -217,11 +219,13 @@ function update() {
     
         // Collision detection for enemy bullets
         if (bullet.owner === "enemy" && char("a", player.pos).isColliding.rect.red) {
+            play("hit");
             color("yellow");
             particle(bullet.pos);
             bullets.splice(i, 1);
             hitCounter--; // Increment hit counter
             if(hitCounter==0){
+                play("explosion");
                 hitCounter=5;
                 end();
             }
@@ -229,6 +233,7 @@ function update() {
     
         // Shield collision detection for enemy bullets only
         if (bullet.owner === "enemy" && player.shieldActive && bullet.pos.distanceTo(player.pos) < 10) {
+            play("lucky");
             color("blue");
             particle(bullet.pos); // Shield hit effect
             bullets.splice(i, 1); // Remove bullet
