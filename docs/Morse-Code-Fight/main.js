@@ -34,7 +34,8 @@ let hitCounter = 5;
 
 options = {
     viewSize: { x: G.WIDTH, y: G.HEIGHT },
-    seed: 1,
+    seed: 2,
+    isPlayingBgm: true,
     theme: "pixel"
 };
 /**
