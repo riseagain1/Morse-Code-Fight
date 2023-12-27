@@ -177,6 +177,7 @@ function enemyAttackAction() {
 
 
 function update() {
+    play(“powerUp”)
     color("black");
     text(`HP: ${hitCounter}`, G.WIDTH - 50, 10);
     displayActionList();
