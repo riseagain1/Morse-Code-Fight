@@ -1,32 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morse Code Fight</title>
-    <style>
-        /* Add your CSS styles here */
-        body {
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
-        }
-        #game-container {
-            /* Adjust size as needed */
-            width: 800px;
-            height: 600px;
-        }
-    </style>
-</head>
-<body>
-    <div id="game-container">
-        <!-- Game content will be managed by main.js -->
-    </div>
-
-    <!-- Game Script -->
-    <script src="Morse-Code-Fight/main.js"></script>
-</body>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Morse-Code-Fight</title>
+    <meta
+      name="viewport"
+      content="width=device-width, height=device-height,
+    user-scalable=no, initial-scale=1, maximum-scale=1"
+    />
+    <script src="https://unpkg.com/sounds-some-sounds@1.0.5/build/index.js"></script>
+    <script src="https://unpkg.com/gif-capture-canvas@1.1.0/build/index.js"></script>
+    <script src="https://unpkg.com/terser@4.6.11/dist/bundle.min.js"></script>
+    <script src="https://unpkg.com/pixi.js@5.3.0/dist/pixi.min.js"></script>
+    <script src="https://unpkg.com/pixi-filters@3.1.1/dist/pixi-filters.js"></script>
+    <script>
+      var module = {};
+    </script>
+    <script src="https://unpkg.com/lodash.clonedeep@4.5.0/index.js"></script>
+    <script src="bundle.js"></script>
+    <script src="Morse-Code-Fight/main.js"></script>  
+    <script>
+      addGameScript();
+      window.addEventListener("load", onLoad);
+    </script>
+  </head>
+  <body style="background: #ddd"></body>
 </html>
